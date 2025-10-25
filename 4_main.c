@@ -9,10 +9,10 @@ int main()
     scanf("%d %d %d", &a, &b, &c);
     if (a + b > c && b + c > a && a + c > b)
     {
-        printf("三条边可以组成三角形\n");
+        printf("可以组成三角形\n");
     }
     else {
-        printf("三条边不能组成三角形\n");
+        printf("不能组成三角形\n");
     }
 
     return 0;
