@@ -6,13 +6,12 @@ int main()
 {
     int n = 0;
     int a = 2;
-     while(1)
-{
+    
        scanf("%d",&n);
     if(n < 1 || n >= 50 )
     {
         printf("数字无效");
-            break;
+        return 0;
     }
     while(a<n)
 {
@@ -27,6 +26,5 @@ int main()
     printf("密钥不安全，请重新输入");
     else
     printf("密钥安全，密码设置成功");
-}
     return 0;
 }
