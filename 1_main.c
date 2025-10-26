@@ -10,7 +10,7 @@ int main()
     while(1){
     if(n < 1 || n >= 50 )
     {
-        printf("数字无效")；
+        printf("数字无效");
             continue;
     }
     for(a=2;a<=n;a++)
@@ -22,6 +22,7 @@ int main()
       printf("密钥不安全，请重新输入");
     else
       printf("密钥安全，密码设置成功");
+      break;
     }
     return 0;
 }
