@@ -11,7 +11,7 @@ int main()
     if(n < 1 || n >= 50 )
     {
         printf("数字无效");
-            continue;
+        break;
     }
     for(a=2;a<=n;a++)
     {
