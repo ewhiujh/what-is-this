@@ -6,7 +6,14 @@ int main()
 {
     int n = 0;
     int a = 2;
-    scanf("%d",&n);
+     while(1)
+{
+       scanf("%d",&n);
+    if(n < 1 || n >= 50 )
+    {
+        printf("数字无效")；
+            continue;
+    }
     while(a<n)
 {
     if(n%a==0)
@@ -15,10 +22,11 @@ int main()
    }
     else
     a++;
-}
-    if(a < n || n >= 50)
+ }
+    if(a < n)
     printf("密钥不安全，请重新输入");
     else
     printf("密钥安全，密码设置成功");
+}
     return 0;
 }
