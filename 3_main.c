@@ -11,8 +11,8 @@ int main()
        scanf("%d",&n);
     if(n < 1 || n >= 50 )
     {
-        printf("数字无效")；
-            continue;
+        printf("数字无效");
+            break;
     }
     while(a<n)
 {
