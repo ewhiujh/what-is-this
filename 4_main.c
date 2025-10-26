@@ -4,16 +4,30 @@
 #include <stdio.h>
 int main()
 {
-    int a,b,c;
-    printf("请输入三条整数边长：");
-    scanf("%d %d %d", &a, &b, &c);
-    if (a + b > c && b + c > a && a + c > b)
+    int a = 0;
+    int b = 100;
+    int c = 0;
+    int d = 0;
+    int e = 0;
+    while(b<=999)
+ {
+        c=b/100;
+        d=b%100/10;
+        e=b%100%10;
+        if(c * c * c + d * d * d + e * e * e == b)
     {
-        printf("可以组成三角形\n");
+      if(a == 0)
+        {
+            printf("%d",b);
+        }
+        
+        else
+        {
+            printf(" %d",b);
+        }
+        a++;         
     }
-    else {
-        printf("不能组成三角形\n");
-    }
-
+        b++;       
+ }
     return 0;
 }
