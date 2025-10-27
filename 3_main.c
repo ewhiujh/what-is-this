@@ -22,7 +22,7 @@ int main()
     else
     a++;
  }
-    if(a < n)
+    if(a < n || n == 1)
     printf("密钥不安全，请重新输入");
     else
     printf("密钥安全，密码设置成功");
