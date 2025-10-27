@@ -8,7 +8,7 @@ int main()
     int a = 0;
     scanf("%d",&n);
     while(1){
-    if(n <= 1 || n >= 50 )
+    if(n < 1 || n >= 50 )
     {
         printf("数字无效");
         break;
@@ -18,7 +18,7 @@ int main()
     if(n%a==0)
       break;
     }
-    if(a<n)
+    if(a<n || n==1)
       printf("密钥不安全，请重新输入");
     else
       printf("密钥安全，密码设置成功");
