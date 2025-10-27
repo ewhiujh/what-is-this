@@ -8,7 +8,7 @@ int main()
     int a = 0;
     scanf("%d",&n);
     while(1){
-    if(n < 1 || n >= 50 )
+    if(n <= 1 || n >= 50 )
     {
         printf("数字无效");
         break;
