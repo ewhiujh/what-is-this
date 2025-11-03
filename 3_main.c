@@ -4,27 +4,36 @@
 #include <stdio.h>
 int main()
 {
-    int n = 0;
-    int a = 2;
-    
-       scanf("%d",&n);
-    if(n < 1 || n >= 50 )
+    int arr[10];
+    int a = 0;
+    for(a = 0;a<10;a++)
     {
-        printf("数字无效");
-        return 0;
+        scanf("%d",&arr[a]);
     }
-    while(a<n)
-{
-    if(n%a==0)
-   { 
-    break;
-   }
-    else
-    a++;
- }
-    if(a < n || n == 1)
-    printf("密钥不安全，请重新输入");
-    else
-    printf("密钥安全，密码设置成功");
+    int b = 0;
+    for(a = 0;a<9;a++)
+    {
+        for(b=0;b<9-a;b++)
+        {
+            if(arr[b] > arr[b+1])
+            {
+                int c = 0;
+                c = arr[b];
+                arr[b] = arr[b+1];
+                arr[b+1] = c;
+            }
+        }
+    }
+    for(a = 0;a<10;a++)
+    {
+        if(a==0)
+        {
+            printf("%d",arr[a]);
+        }
+        else
+        {
+            printf(" %d",arr[a]);
+        }
+    }
     return 0;
 }
