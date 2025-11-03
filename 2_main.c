@@ -4,29 +4,22 @@
 #include <stdio.h>
 int main()
 {
-    int a = 0;
-    int b = 100;
-    int c = 0;
-    int d = 0;
-    int e = 0;
-    for(b=100;b<999;b++)
- {
-        c=b/100;
-        d=b%100/10;
-        e=b%100%10;
-        if(c * c * c + d * d * d + e * e * e == b)
+    int arr[3][3];
+    int arr2[3][3];
+    for(int a = 0;a<3;a++)
     {
-            if(a == 0)
-        {
-            printf("%d",b);
-        }
-        
-        else
-        {
-            printf(" %d",b);
-        }
-        a++;
+        scanf("%d %d %d",&arr2[a][0],&arr2[a][1],&arr2[a][2]);
     }
- }
+    for(int a=0;a<3;a++)
+    {
+        for(int b = 0;b<3;b++)
+        {
+            arr[b][a]=arr2[a][b];
+        }
+    }
+     for(int a = 0;a<3;a++)
+    {
+        printf("%d %d %d\n",arr[a][0],arr[a][1],arr[a][2]);
+    }
     return 0;
 }
