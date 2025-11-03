@@ -2,31 +2,33 @@
 //2145715545@qq.com
 //黄家凤
 #include <stdio.h>
+int aa(int arr[],int i)
+{
+    int a = 0;
+    for(int c = 0;c<i;c++)
+    {
+        a += arr[c];
+    }
+    return a;
+}
+int bb(int arr[],int i)
+{
+    int b = 1;
+    for(int c = 0;c<i;c++)
+    {
+        b *= arr[c];
+    }
+    return b;
+}
 int main()
 {
     int arr[5];
-    int a = 0;
-    int b = 0;
-    int c = 0;
-    while(a<5)
+    for(int c=0;c<5;c++)
     {
-        scanf("%d",&b);
-        if(b % 2 == 0)
-        {
-            arr[a] = b;
-            a++;
-        }
+    scanf("%d",&arr[c]);
     }
-    for(c=0;c<5;c++)
-    {
-        if(c==0)
-        {
-            printf("%d",arr[c]);
-        }
-        else
-        {
-            printf(" %d",arr[c]);
-        }
-    }
+    int a = aa(arr,5);
+    int b = bb(arr,5);
+    printf("%d %d\n",a,b);
     return 0;
 }
