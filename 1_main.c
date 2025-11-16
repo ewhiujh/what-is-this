@@ -4,14 +4,10 @@
 #include <stdio.h>
 int main()
 {
-    int arr[3][3];
-    for(int a=0;a<3;a++)
-    {
-        scanf("%d %d %d",&arr[a][0],&arr[a][1],&arr[a][2]);
-    }
-    for(int a=0;a<3;a++)
-    {
-        printf("%d %d %d\n",arr[a][0],arr[a][1],arr[a][2]);
-    }
+    int a;
+    scanf("%d",&a);
+    int *p = &a;
+    *p += 10;
+    printf("%d,%d\n",a,*p);
     return 0;
 }
