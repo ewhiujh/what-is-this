@@ -2,14 +2,20 @@
 //2145715545@qq.com
 //黄家凤
 #include <stdio.h>
-int aa(int a1,int an,int step)
-{
-    int b = ((an-a1)/step)+1;
-    return (a1+an)*b/2;
+void owo(int *ptr_arr,int len){
+    for(int a = len-1;a>0;a--){
+        *(ptr_arr+a)=*(ptr_arr+a-1);
+    }
+    *ptr_arr=0;
 }
-int main()
-{
-    int bb = aa(1,100,1);
-    printf("%d\n",bb);
+int main(){
+    int arr[5];
+    for(int a=0;a<5;a++){
+        scanf("%d",&arr[a]);
+    }
+    owo(arr,5);
+    for(int a=0;a<5;a++){
+        printf("%d ",arr[a]);
+    }
     return 0;
 }
