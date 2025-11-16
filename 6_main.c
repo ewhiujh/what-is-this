@@ -2,33 +2,16 @@
 //2145715545@qq.com
 //黄家凤
 #include <stdio.h>
-int aa(int arr[],int i)
-{
-    int a = 0;
-    for(int c = 0;c<i;c++)
-    {
-        a += arr[c];
+#include <stdlib.h>
+int main(){
+    int *ptr=(int*)malloc(5*sizeof(int));
+    for(int a=0;a<5;a++){
+        scanf("%d",ptr+a);
     }
-    return a;
-}
-int bb(int arr[],int i)
-{
-    int b = 1;
-    for(int c = 0;c<i;c++)
-    {
-        b *= arr[c];
+    for(int a=0;a<5;a++){
+        printf("%d ",*(ptr+a));
     }
-    return b;
-}
-int main()
-{
-    int arr[5];
-    for(int c=0;c<5;c++)
-    {
-    scanf("%d",&arr[c]);
-    }
-    int a = aa(arr,5);
-    int b = bb(arr,5);
-    printf("%d %d\n",a,b);
+    free(ptr);
+    ptr = NULL;
     return 0;
 }
